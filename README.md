@@ -2,6 +2,8 @@
 
 Credits: Magician [owner of Kotyata] (help), Rumour (help), Core (idea)
 
+Depends: Shavit, Dhooks (i think is in default SM unless ur shit is old)
+
 This is a plugin (for css, csgo died idc) that will automatically sync for you. It works by delaying your mouse input for 1 tick, and then syncing for you as well. This leads to your keypress being 1 tick earlier than your turn tick, which (in css) is true perfect sync.
 This is different from an autostrafer you'd find in a TAS plugin, as the mouse input still fully relies on the user.
 
