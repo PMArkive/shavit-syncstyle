@@ -8,13 +8,14 @@ This is a plugin (for css, csgo died idc) that will automatically sync for you. 
 This is different from an autostrafer you'd find in a TAS plugin, as the mouse input still fully relies on the user.
 
 Notes:
-You don't have to press your keys, but you should. It will look smoother on your screen if you do, even if your keypresses are ass.
-It will not activate till you have JUMPED, so if you do a slide, you must press your keys still to properly do it.
-It will stop adjusting your sync if you are not moving your mouse in the air.
-It will stop adjusting your sync for 8 ticks after you teleport, this is to stop it from acting whacky when using segments.
-If you are replacing your current auto strafe plugin, keep in mind this one is much more potent and will essentially nullify all times on the old autostrafer.
+- You don't have to press your keys, but you should. It will look smoother on your screen if you do, even if your keypresses are ass.
+- It will not activate till you have JUMPED, so if you do a slide, you must press your keys still to properly do it.
+- It will stop adjusting your sync if you are not moving your mouse in the air.
+- It will stop adjusting your sync for 8 ticks after you teleport, this is to stop it from acting whacky when using segments.
+- If you are replacing your current auto strafe plugin, keep in mind this one is much more potent and will essentially nullify all times on the old autostrafer.
 
 BIG WARNING READ THIS:
+
 This plugin will MOST LIKELY (90%) break your SSJ, Jhud, and Strafe Trainer so if you want those to still work, you should use my replacements for them.
 
 https://github.com/Nimmy2222/bhop-get-stats
