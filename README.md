@@ -1,6 +1,6 @@
 # shavit-syncstyle
 
-Credits: Magician [owner of Kotyata] (help), Rumour (help), Core (idea)
+Credits: Kaldun [owner of Kotyata] (help), Rumour (help), Core (idea)
 
 Depends: Shavit, Dhooks (i think is in default SM unless ur shit is old)
 
