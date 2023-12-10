@@ -12,6 +12,7 @@ Notes:
 - It will not activate till you have JUMPED, so if you do a slide, you must press your keys still to properly do it.
 - It will stop adjusting your sync if you are not moving your mouse in the air.
 - It will stop adjusting your sync for 8 ticks after you teleport, this is to stop it from acting whacky when using segments.
+- It will stop adjusting your sync on surf ramps.
 - If you are replacing your current auto strafe plugin, keep in mind this one is much more potent and will essentially nullify all times on the old autostrafer.
 
 BIG WARNING READ THIS:
