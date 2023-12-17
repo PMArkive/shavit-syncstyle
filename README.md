@@ -2,9 +2,12 @@
 
 ### BIG WARNING READ THIS: This plugin will MOST LIKELY (90%) break your SSJ, Jhud, and Strafe Trainer so if you want those to still work, you should use my [replacements](https://github.com/Nimmy2222/bhop-get-stats) for them.
 
+Credits: Kaldun [owner of Kotyata] (help), Rumour (help), Core (idea)
+
 # Directions
-```
+
 In shavit-styles.cfg (cstrike/addons/sourcemod/configs/shavit-styles.cfg) add something along the lines of:
+```
  "9"
 {
 	"name"				"Autosync"
@@ -14,13 +17,10 @@ In shavit-styles.cfg (cstrike/addons/sourcemod/configs/shavit-styles.cfg) add so
 	"rankingmultiplier"	"0.0"
 	"specialstring"		"autosync; bash_bypass; ssjtop_bypass"
 }
-
+```
 Most important part here is just "autosync" being in the special strings section. You can also change what string the plugin
 requires in cstrike/cfg/sourcemod/plugin.shavit-syncstyle.cfg. So if you put "arbitarystringhere", then in shavit-styles cfg
 special strings, any style with "arbitarystringhere" will have the auto syncer on it.
-```
-
-Credits: Kaldun [owner of Kotyata] (help), Rumour (help), Core (idea)
 
 # Dependencies
 * [Shavit Timer](https://github.com/shavitush/bhoptimer)
