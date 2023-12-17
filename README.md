@@ -26,12 +26,9 @@ special strings, any style with "arbitarystringhere" will have the auto syncer o
 * [Shavit Timer](https://github.com/shavitush/bhoptimer)
 * [Dhooks](https://forums.alliedmods.net/showpost.php?p=2588686&postcount=589) (Should already be in SourceMod unless you're on an old version)
 
-This is a plugin (for css, csgo died idc) that will automatically sync for you. It works by delaying your mouse input for 1 tick and but syncing your updated mouse movement. This leads to your keypress being 1 tick earlier than your turn tick, which is true perfect sync.
-This is different from an autostrafer you'd find in a TAS plugin, as the mouse input still fully relies on the user (and will not activate in some situations.
-
-Notes:
-```
-- You don't have to press your keys, but you should. It will look smoother on your screen if you do, even if your keypresses are ass.
-- It will not activate till you have JUMPED, so if you do a slide, you must press your keys still to properly do it.
-- It will stop adjusting your sync if you are not moving your mouse in the air, surfing, or 8 ticks after you teleport.
-```
+# Notes
+* This is a plugin (for css, csgo died idc) that will automatically sync for you. It works by delaying your mouse input for 1 tick and but syncing your updated mouse movement. This leads to your keypress being 1 tick earlier than your turn tick, which is true perfect sync.
+* This is different from an autostrafer you'd find in a TAS plugin, as the mouse input still fully relies on the user (and will not activate in some situations.
+* You don't have to press your keys, but you should. It will look smoother on your screen if you do, even if your keypresses are ass.
+* It will not activate till you have JUMPED, so if you do a slide, you must press your keys still to properly do it.
+* It will stop adjusting your sync if you are not moving your mouse in the air, surfing, or 8 ticks after you teleport.
