@@ -1,8 +1,8 @@
 # shavit-syncstyle
 
-###BIG WARNING READ THIS: This plugin will MOST LIKELY (90%) break your SSJ, Jhud, and Strafe Trainer so if you want those to still work, you should use my [replacements](https://github.com/Nimmy2222/bhop-get-stats) for them.
+### BIG WARNING READ THIS: This plugin will MOST LIKELY (90%) break your SSJ, Jhud, and Strafe Trainer so if you want those to still work, you should use my [replacements](https://github.com/Nimmy2222/bhop-get-stats) for them.
 
-#Directions
+# Directions
 ```
 In shavit-styles.cfg (cstrike/addons/sourcemod/configs/shavit-styles.cfg) add something along the lines of:
  "9"
@@ -20,7 +20,7 @@ Most important part here is just "autosync" being in the special strings section
 
 Credits: Kaldun [owner of Kotyata] (help), Rumour (help), Core (idea)
 
-#Dependencies
+# Dependencies
 * [Shavit Timer](https://github.com/shavitush/bhoptimer)
 * [Dhooks](https://forums.alliedmods.net/showpost.php?p=2588686&postcount=589) (Should already be in SourceMod unless you're on an old version)
 
