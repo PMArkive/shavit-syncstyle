@@ -6,6 +6,8 @@ Credits: Kaldun [owner of Kotyata] (help), Rumour (help), Core (idea)
 
 # Directions
 
+Press the green "Code" button at the top, and download zip. Extract zip, then drag the plugins folder into ```cstrike/addons/sourcemod.```
+
 In shavit-styles.cfg (cstrike/addons/sourcemod/configs/shavit-styles.cfg) add something along the lines of:
 ```
  "9"
