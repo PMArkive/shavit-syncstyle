@@ -2,6 +2,8 @@
 
 ### BIG WARNING READ THIS: This plugin will MOST LIKELY (90%) break your SSJ, Jhud, and Strafe Trainer so if you want those to still work, you should use my [replacements](https://github.com/Nimmy2222/bhop-get-stats) for them.
 
+[Click here support](https://discord.gg/j9nfnjcUVd)
+
 Credits: Kaldun [owner of Kotyata] (help), Rumour (help), Core (idea)
 
 # Directions
