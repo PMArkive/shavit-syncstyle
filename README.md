@@ -6,16 +6,18 @@
 ```
 In shavit-styles.cfg (cstrike/addons/sourcemod/configs/shavit-styles.cfg) add something along the lines of:
  "9"
-	{
-		"name"				"Autosync"
-		"shortname"			"AS"
-		"command"			"au; as; autosync"
-		"clantag"			"AS"
-		"rankingmultiplier"	"0.0"
-		"specialstring"		"autosync; bash_bypass; ssjtop_bypass"
-	}
+{
+	"name"				"Autosync"
+	"shortname"			"AS"
+	"command"			"au; as; autosync"
+	"clantag"			"AS"
+	"rankingmultiplier"	"0.0"
+	"specialstring"		"autosync; bash_bypass; ssjtop_bypass"
+}
 
-Most important part here is just "autosync" being in the special strings section. You can also change what string the plugin requires in cstrike/cfg/sourcemod/plugin.shavit-syncstyle.cfg. So if you put "arbitarystringhere", then in shavit-styles cfg special strings, any style with "arbitarystringhere" will have the auto syncer on it.
+Most important part here is just "autosync" being in the special strings section. You can also change what string the plugin
+requires in cstrike/cfg/sourcemod/plugin.shavit-syncstyle.cfg. So if you put "arbitarystringhere", then in shavit-styles cfg
+special strings, any style with "arbitarystringhere" will have the auto syncer on it.
 ```
 
 Credits: Kaldun [owner of Kotyata] (help), Rumour (help), Core (idea)
