@@ -23,10 +23,10 @@ int g_iGroundTicks[MAXPLAYERS + 1];
 int g_iTicksSinceTeleport[MAXPLAYERS + 1];
 
 public Plugin myinfo = {
-	name = "Sync style for shavit.", 
-	author = "nimmy", 
-	description = "Provides sync style.", 
-	version = "1.2.0", 
+	name = "Sync style for shavit.",
+	author = "nimmy",
+	description = "Provides sync style.",
+	version = "1.2.0",
 	url = "https://github.com/Nimmy2222/shavit-syncstyle"
 };
 
@@ -55,6 +55,9 @@ void InitializeTeleportDHook() {
 	}
 
 	g_hTeleportDhook = new DynamicHook(offset, HookType_Entity, ReturnType_Void, ThisPointer_CBaseEntity);
+	g_hTeleportDhook.AddParam(HookParamType_VectorPtr);
+	g_hTeleportDhook.AddParam(HookParamType_VectorPtr);
+	g_hTeleportDhook.AddParam(HookParamType_VectorPtr);
 	delete gamedataConf;
 }
 
@@ -101,7 +104,7 @@ public Action OnPlayerRunCmd(int client, int &buttons, int &impulse, float vel[3
 		g_fLastAngles[client][i] = angles[i];
 		angles[i] = temp[i];
 	}
-	
+
 	//g_bInBhop and Off Ground are NOT the same thing, dont adjust sync if no movement for segment CPs, give time after teleport for same reason
 	if(g_iGroundTicks[client] == 0 && FloatAbs(g_fYawDiff[client]) > 0.01 && g_iTicksSinceTeleport[client] > 8 && !IsSurfing(client)) {
 		if(g_iTurnDir[client] == RIGHT) {
