@@ -18,6 +18,8 @@ char g_sSpecialString[stylestrings_t::sSpecialString];
 float g_fLastAngles[MAXPLAYERS + 1][3];
 float g_fYawDiff[MAXPLAYERS + 1];
 
+bool g_bSyncEnabled[MAXPLAYERS + 1] = {true, ...};
+
 int g_iTurnDir[MAXPLAYERS + 1];
 int g_iGroundTicks[MAXPLAYERS + 1];
 int g_iTicksSinceTeleport[MAXPLAYERS + 1];
@@ -32,7 +34,9 @@ public Plugin myinfo = {
 
 public void OnPluginStart()
 {
-	g_hSpecialString = CreateConVar("autostrafer", "autosync", "Special string value to use in shavit-styles.cfg"); //not changing cvar name since its already in cfgs
+	RegConsoleCmd("sm_synctoggle", Command_ToggleSync);
+    
+    g_hSpecialString = CreateConVar("autostrafer", "autosync", "Special string value to use in shavit-styles.cfg"); //not changing cvar name since its already in cfgs
 	g_hSpecialString.AddChangeHook(ConVar_OnSpecialStringChanged);
 	g_hSpecialString.GetString(g_sSpecialString, sizeof(g_sSpecialString));
 	InitializeTeleportDHook();
@@ -45,6 +49,21 @@ public void OnPluginStart()
 			OnClientPutInServer(i);
 		}
 	}
+}
+
+public Action Command_ToggleSync(int client, int args)
+{
+	if(!IsValidClient(client, true))
+		return Plugin_Handled;
+
+	if(!IsAutostrafeStyle(Shavit_GetBhopStyle(client)))
+	{
+		return Plugin_Handled;
+	}
+
+	g_bSyncEnabled[client] = !g_bSyncEnabled[client];
+	Shavit_PrintToChat(client, "Autostrafe: %s", g_bSyncEnabled[client] ? "\x0700ff00On" : "\x07ff0000Off");
+	return Plugin_Handled;
 }
 
 void InitializeTeleportDHook()
@@ -76,6 +95,7 @@ public MRESReturn DHooks_OnTeleport(int client, Handle hParams)
 
 public void OnClientPutInServer(int client)
 {
+    g_bSyncEnabled[client] = true;
 	if(IsFakeClient(client))
 	{
 		return;
@@ -88,12 +108,23 @@ public void OnClientPutInServer(int client)
 	}
 }
 
+public void Shavit_OnStyleChanged(int client, int oldstyle, int newstyle)
+{
+	if(IsValidClient(client, true))
+	{
+		if(IsAutostrafeStyle(newstyle))
+		{
+			g_bSyncEnabled[client] = true;
+		}
+	}
+}
+
 public Action OnPlayerRunCmd(int client, int &buttons, int &impulse, float vel[3], float angles[3])
 {
-	if(!IsValidClient(client, true) || !IsAutostrafeStyle(Shavit_GetBhopStyle(client)))
-	{
-		return Plugin_Continue;
-	}
+    if(!IsValidClient(client, true) || !IsAutostrafeStyle(Shavit_GetBhopStyle(client)) || !g_bSyncEnabled[client])
+    {
+        return Plugin_Continue;
+    }
 
 	MoveType movetype = GetEntityMoveType(client);
 	if(movetype == MOVETYPE_NONE || movetype == MOVETYPE_NOCLIP || movetype == MOVETYPE_LADDER || GetEntProp(client, Prop_Data, "m_nWaterLevel") >= 2)
